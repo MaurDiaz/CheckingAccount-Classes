@@ -21,19 +21,19 @@ namespace Activity5._2._3
             this.TransactionCount++;
         }
 
-        private void UpdateTransectionCount()
+        private void UpdateTransactionCount()
         {
-           //ToDo
+           this.TransactionCount = 0;
         }
 
         public void MonthEnd()
         {
             this.Value -= this.AccountFee;
-            this.TransactionCount = 0;
             if(this.TransactionCount > this.TransactionLimit)
             {
                 this.Value -= this.TransactionFee;
             }
+            this.UpdateTransactionCount();
         }
     }
 }
