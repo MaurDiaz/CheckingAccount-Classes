@@ -30,6 +30,10 @@ namespace Activity5._2._3
         {
             this.Value -= this.AccountFee;
             this.TransactionCount = 0;
+            if(this.TransactionCount > this.TransactionLimit)
+            {
+                this.Value -= this.TransactionFee;
+            }
         }
     }
 }
